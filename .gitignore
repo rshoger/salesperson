@@ -16,6 +16,10 @@ salesperson
 *.log
 *.gz
 
+# BibTeX build files
+*.bbl
+*.blg
+
 # Graphviz dot files & related
 *.dot
 *.png
