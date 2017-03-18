@@ -18,13 +18,13 @@
 
 \begin{document}
 
-\section{Christofide Heuristic}
+\section{Christofides Heuristic}
 
 The Christofides algorithm improves on the 2-approximation algorithm, providing
 a worst case ratio of $3/2$ at the cost of increasing the running time to
 $O(n^3)$ [1].\\
 
-The following steps summarize the Christofide algorithm:
+The following steps summarize the Christofides algorithm:
 \begin{itemize}
   \item Using the entire graph, build a minimum-spanning tree Make a set of
         vertices
@@ -68,7 +68,7 @@ spanning tree.
 %  \caption{Christofide}
 %  \label{alg_christofide}
   \begin{algorithmic}[1]
-    \Procedure {Christofide}{$\{G=(V,E),\ s\}$}
+    \Procedure {Christofides}{$\{G=(V,E),\ s\}$}
 
     \For {$v \in V$}
       \State $v_{\textit{key}} \gets \infty$
