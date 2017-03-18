@@ -1,9 +1,14 @@
 \documentclass{article}
+% Use BibTeX
+\usepackage{cite}
 
+% Packages for algorithm typesetting
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
 \usepackage{enumitem}
+
+% Math Related
 \usepackage{amsmath, amssymb}
 
 \usepackage[section]{placeins}
@@ -35,7 +40,7 @@ Step one, getting the minimum spanning tree, makes it such that we are working
 with a new graph that has eliminated some of the higher cost edges without
 getting rid of any of the vertices we must visit (recall all must be visited).
 Next, we get the set of vertices with an odd degree which, by the handshaking
-lemma, must be an even number of vertices [2]. Finding a minimum weight matching
+lemma, must be an even number of vertices ~\cite{goodrich2015christofides}. Finding a minimum weight matching
 on these and adding it to the minimum spanning tree ensures that the shortest
 of edges will be available when finding the tour. Finding a minimum weight
 matching also ensures each vertex has enough edges to avoid having to reuse
@@ -45,12 +50,12 @@ finding a Euler tour, we can simply remove repeated vertices because each vertex
 can only be visited once, and in the actual map all vertices can be reached. Due
 to the triangle inequality, removing repeated vertices doesn’t increase weight.
 [2] Tests have shown that the algorithm “tends to place itself 10\% above the
-Held-Karp lower bound”[1].\\
+Held-Karp lower bound” ~\cite{nilsson2003heuristics}.\\
 
 The key difference between it and the 2-approximation
 algorithm is that, rather than simply duplicating edges to ensure an Euler
 cycle, it creates a minimum weight matching on the vertices with odd degree and
-combines it with the minimum spanning tree [1].
+combines it with the minimum spanning tree ~\cite{nilsson2003heuristics}.
 
 \subsection{pseudocode}
 Below in the pseudocode for the algorithm. Note that it combines the step of
@@ -151,9 +156,6 @@ spanning tree.
     \EndProcedure
   \end{algorithmic}
 %\end{algorithm}
-\par
 \FloatBarrier
 
-\clearpage
-\newpage
 \end{document}

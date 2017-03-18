@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{cite}
 \usepackage{standalone}
 
 \usepackage{algorithm}
@@ -12,21 +13,24 @@
 
 \setlength\parindent{0pt}
 
-\begin{document}
+\title{Travelling Salesperson Problem}
 
+% Create the file `authors.tex` and provide \author{<author>, ..., <author>}
+\input{authors}
+
+\begin{document}
+  \maketitle
   \section{Introduction}
-  Starting our research, there were a plethora of information on the various
-  methods to obtain or at least approximate an optimal traveling salesman tour.
-  We found a variety of algorithms and heuristic approaches. Some were
-  straightforward such the nearest neighbor heuristic, while others had a more
-  methodical approach to approximating an optimal tour. After some deliberation
-  we decided upon the Christofides approximation algorithm as there seemed to be
-  ample documentation regarding the algorithm as well a quality that would
-  satisfy the required bounds.
+  There are many ways to approach the Travelling Salesman Problem (TSP), otherwise referred to as the Travelling Salesperson Problem in this project.\\
+
+  In this report are summaries for three approaches to solving the TSP: The Christofides approach, the nearest neighbor solution and an approach by greedy heuristics. These are all approaches that do not produce optimal solutions, but solutions that are some multiple of the optimal solution.
 
   \input{"../christofide/christofide"}
-  
+
   \input{"../nearest_neighbor/nearest_neighbor"}
 
   \input{"../greedy/greedy"}
+
+  \bibliography{citations}{}
+  \bibliographystyle{plain}
 \end{document}

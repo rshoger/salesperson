@@ -59,11 +59,12 @@ and there are $|V|$ edges. This means the tour has created a Hamiltonian cycle.
 \FloatBarrier
 
 \subsection{Detail}
+
 A major drawback to this approach is that it does no forecasting and picks the best selection at
 the moment. This greedy shortsightedness is exactly like nearest neighbor, as they both do not
 look ahead. The difference between the two greedy approaches is where the focus lies. The
 nearest neighbor evaluates adjacent nodes, while the greedy approaches focuses on all edges to
-build a tour piece by piece. As one can see it has a runtime of $O(n^2 log2(n))$[1] where a large
+build a tour piece by piece. As one can see it has a runtime of $O(n^2 log2(n))$ \cite{nilsson2003heuristics} where a large
 portion of the running time is spent ordering the edges. Like any greedy algorithm, it often
 produces sub-optimal tours and requires additional improvement heuristics and algorithms to
 increase quality. For all its simplicity, it also was not a good choice due to its inability to
