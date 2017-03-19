@@ -9,6 +9,9 @@
 # Target binary
 salesperson
 
+# PDF
+*.pdf
+
 # LaTeX related build files
 *.aux
 *.fdb_*

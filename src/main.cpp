@@ -1,4 +1,4 @@
-/* vim: set tabstop=4 shiftwidth=4 expandtab : */
+// vim: set tabstop=4 shiftwidth=4 expandtab :
 
 #include <iostream>
 #include <vector>
