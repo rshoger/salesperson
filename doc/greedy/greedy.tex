@@ -1,3 +1,5 @@
+% !TEX engine = xelatex
+
 \documentclass{article}
 
 \usepackage{algorithm}
@@ -7,6 +9,10 @@
 \usepackage{amsmath, amssymb}
 
 \usepackage[section]{placeins}
+
+\usepackage{unicode-math}
+\setmainfont{Latin Modern Roman}
+\setmathfont{Latin Modern Math}
 
 \setlength\parindent{0pt}
 
@@ -45,7 +51,7 @@ and there are $|V|$ edges. This means the tour has created a Hamiltonian cycle.
       \State $x \gets \min E_{\textit{sorted}}$
       \If {$x \cup T \textit{ has no cycle with edges } > |V|$}
         \If {$\textit{deg}(x) \leq 2$}
-          \If {$\nexists x \in T$}
+          \If {$x \notin T$}
             \State $T \gets T \cup x$
           \EndIf
         \EndIf

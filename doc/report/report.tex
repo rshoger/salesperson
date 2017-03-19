@@ -1,3 +1,6 @@
+%!TEX root = report.tex
+%!TEX program = xelatex
+
 \documentclass{article}
 
 \usepackage{cite}
@@ -6,14 +9,20 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
+\usepackage[section]{placeins}
+
 \usepackage{enumitem}
+
 \usepackage{amsmath, amssymb}
 
-\usepackage[section]{placeins}
+% Use with XeLaTeX
+% \usepackage{unicode-math}
+% \setmainfont{Latin Modern Roman}
+% \setmathfont{Latin Modern Math}
 
 \setlength\parindent{0pt}
 
-\title{Travelling Salesperson Problem}
+\title{Traveling Salesperson Problem}
 
 % Create the file `authors.tex` and provide \author{<author>, ..., <author>}
 \input{authors}
@@ -21,11 +30,11 @@
 \begin{document}
   \maketitle
   \section{Introduction}
-  There are many ways to approach the Travelling Salesman Problem (TSP), otherwise referred to as the Travelling Salesperson Problem in this project.\\
+  There are many ways to approach the Traveling Salesman Problem (TSP), otherwise referred to as the Traveling Salesperson Problem in this project.\\
 
   In this report are summaries for three approaches to solving the TSP: The Christofides approach, the nearest neighbor solution and an approach by greedy heuristics. These are all approaches that do not produce optimal solutions, but solutions that are some multiple of the optimal solution.
 
-  \input{"../christofide/christofide"}
+  \input{"../christofides/christofides"}
 
   \input{"../nearest_neighbor/nearest_neighbor"}
 

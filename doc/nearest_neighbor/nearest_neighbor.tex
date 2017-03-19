@@ -1,3 +1,4 @@
+% !TEX engine = xelatex
 \documentclass{article}
 
 \usepackage{algorithm}
@@ -42,9 +43,9 @@ all unvisited nodes have been seen once.
       \For {\{ $u \in N(v) \mid v \in V$ \}}
         \State $x \gets \min N(v)$
 
-        \If {$\textit{vertex } u \textit{not visited}$}
+        \If {$\textit{vertex } \lq u \rq \textit{ not visited}$}
         \Else
-          \State $x \gets \textit{Next shortest adjacency}$
+          \State $x \gets \textit{next shortest adjacency}$
         \EndIf
       \EndFor
     \EndWhile
